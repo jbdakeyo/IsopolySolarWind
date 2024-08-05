@@ -18,7 +18,7 @@ For most combinations of physical conditions, the trans-sonic critical point is 
 All the thermal regimes can be declined in both "f-subsonic" and "f-suersonic" type of solutions, depending the influence of the expansion factor profile. More details available in [Dakeyo et al. (2024b)](https://ui.adsabs.harvard.edu/abs/2022ApJ...940..130D/abstract) 
 
 
-Since all solutions are computed with the same set of functions, each of the above solutions can be obtained by modifying the inputs parameters. The `main_iso_poly_dakeyo2024b` code returns an array of heliocentric distances ($r$ in solar radii), density ($n$ in #/$cm^{-3}$), fluid velocity ($u$ in km/s), fluid temperatures ($T_p$ and $T_e$ in Kelvin), expansion factor profile ($f$) and a bolean mentionning if this is a "f-supersonic" type solution (bol_super=0 $\rightarrow$ f-subsonic, bol_super=1 $\rightarrow$ f-supersonic).  As well, any parameters that went into the solution are returned as "inputs".
+Since all solutions are computed with the same set of functions, each of the above solutions can be obtained by modifying the inputs parameters. The `main_iso_poly_dakeyo2024b` code returns an array of heliocentric distances ($r$ in solar radii), density ($n$ in #/$cm^{-3}$ ), fluid velocity ($u$ in km/s), fluid temperatures ($T_p$ and $T_e$ in Kelvin), expansion factor profile ($f$) and a bolean mentionning if this is a "f-supersonic" type solution (bol_super=0 $\rightarrow$ f-subsonic, bol_super=1 $\rightarrow$ f-supersonic).  As well, any parameters that went into the solution are returned as "inputs".
 
 All the outputs are `numpy array`. 
 
