@@ -82,5 +82,3 @@ plot_energy = False
 Examples for all the thermal regimes and types of solution (f-subsonic and f-supersonic) can be seen in `ExampleNotebook.ipynb`
 
 
-
-A new set of example plots is appended to [ExampleNotebook.ipynb](https://github.com/STBadman/ParkerSolarWind/blob/main/ExampleNotebook.ipynb) to illustrate these updates. 
