@@ -19,7 +19,7 @@ All the thermal regimes can be declined in both "f-subsonic" and "f-suersonic" t
 
 
 
-Since all solutions are computed with the same set of functions, each of the above solutions can be obtained by modifying the inputs parameters. The `main_iso_poly_dakeyo2024b` code returns an array of heliocentric distances ($r$), density ($n$), fluid velocity ($u$), fluid temperatures ($T_p$ and $T_e$), expansion factor profile ($f$) and a bolean mentionning if this is a "f-supersonic" type solution (bol_super=0 : f-subsonic, bol_super=1 : f-supersonic).  As well, any parameters that went into the solution are returned as "inputs".
+Since all solutions are computed with the same set of functions, each of the above solutions can be obtained by modifying the inputs parameters. The `main_iso_poly_dakeyo2024b` code returns an array of heliocentric distances ($r$), density ($n$), fluid velocity ($u$), fluid temperatures ($T_p$ and $T_e$), expansion factor profile ($f$) and a bolean mentionning if this is a "f-supersonic" type solution (bol_super=0 --> f-subsonic, bol_super=1 --> f-supersonic).  As well, any parameters that went into the solution are returned as "inputs".
 
 Units are tracked with `astropy.units` and the outputs of the above functions are `astropy.units.Quantity` objects.
 
