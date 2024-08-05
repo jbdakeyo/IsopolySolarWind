@@ -9,11 +9,11 @@ There are three main files here `function_iso_poly_dakeyo2024b`, `run_and_plot_f
 The combination of input parameters results in three different possible thermal regimes :
 
 * A fully isothermal solar wind ($\gamma_p =  \gamma_e = 1$) <details><p> - This follows [Parker 1958](https://ui.adsabs.harvard.edu/abs/1958ApJ...128..664P/abstract), in which the solar wind fluid is held at a fixed temperature. Mass flux conservation results in a negative density gradient and in turn an outwards directed pressure gradient force. For sufficiently hot $T_0$, this outwards force outcompetes gravitation, resulting in a trans-sonic solar wind flow out to infinity. While such a constant temperature is non-physical in the heliosphere, it is a reasonable first approximation to behavior in the solar corona where coronal heating operates.</p></details>
-* A two fluid isopoly solar wind with single transition ($\gamma_p$ and/or $\gamma_e \neq 1$  with  $r_{iso|p} = r_{iso|e}$) <details><p> - Here, the solar wind temperature is allowed to cool with heliocentric distance, as is observed to actually occur in the solar wind (e.g. [Dakeyo et al. (2022)](https://ui.adsabs.harvard.edu/abs/2022ApJ...940..130D/abstract). 
+* A two fluid isopoly solar wind with single transition ($\gamma_p$ and/or $\gamma_e \neq 1$,  with  $r_{iso|p} = r_{iso|e}$) <details><p> - Here, the solar wind temperature is allowed to cool with heliocentric distance, as is observed to actually occur in the solar wind (e.g. [Dakeyo et al. (2022)](https://ui.adsabs.harvard.edu/abs/2022ApJ...940..130D/abstract). 
 This consists of an initial isothermal evolution (isothermal layer) out to some boundary distance called the "isothermal radius" $r_{iso}$, which can nominally be interpreted as defining a corona as the region in which coronal heating (as an abstract physical process) operates. In this solution case, both protons and electrons share the transition, i.e. $r_{iso} = r_{iso|p} = r_{iso|e}$. 
 For $r \gt r_{iso}$, the solar wind is constrained to follow a polytropic evolution which is initialized by the outer boundary conditions of the isothermal region. Protons and electrons can follow differentiate polytropic evolution ($\gamma_p \neq \gamma_e$ is possible). 
 For most combinations of physical conditions, the trans-sonic critical point is located within the isothermal region. As long as the isothermal boundary is sufficiently high that the solar wind stays super-sonic at the (unphysical discontinuity) transition to polytropic behavior, the solution remains on the asymptotically accelerating solution branch and a reasonable solar wind solution is obtained. The transition can be smoothed (no discontinuity anymore) considering slowy varying polytropic indixes at the transition between the two regions, but this feature is not adressed here and may required deepest work. </details></p> 
-* A two fluid isopoly solar wind with double transition ($\gamma_p$ and/or $\gamma_e \neq 1$  with  $r_{iso|p} \neq r_{iso|e}$) <details><p> - This case is closely similar to the single transition solution, at the difference that protons and electrons do not share the same isothermal radius. </details></p>
+* A two fluid isopoly solar wind with double transition ($\gamma_p$ and/or $\gamma_e \neq 1$,  with  $r_{iso|p} \neq r_{iso|e}$) <details><p> - This case is closely similar to the single transition solution, at the difference that protons and electrons do not share the same isothermal radius. </details></p>
 
 All the thermal regimes can be declined in both "f-subsonic" and "f-suersonic" type of solutions, depending the influence of the expansion factor profile. More details available in [Dakeyo et al. (2024b)](https://ui.adsabs.harvard.edu/abs/2022ApJ...940..130D/abstract) 
 
@@ -26,23 +26,56 @@ Units are tracked with `astropy.units` and the outputs of the above functions ar
 
 `plot_parkersolarwind` subsequently contains plotting functions which are expecting these same output arrays and parameters. 
 
-In the following example, we solve and plot an isothermal layer solution :
+In the following example, we solve and plot an isopoly solution :
 
 ```python
-import parkersolarwind as psw
-import numpy as np
-import astropy.units as u
-import astropy.constants as const
-import matplotlib.pyplot as plt
-sol = psw.solve_isothermal_layer(
-    np.logspace(0,np.log10(200),400)*u.R_sun, # Radial grid points
-    11.5*u.R_sun, # Isothermal layer outer radius
-    1.64*u.MK, # Isothermal layer temperature
-    1.38, # Polytropic layer polytropic index
-    n0=11e6/u.cm**3 # Density normalization
-) 
-fig, axes = psw.plot_isothermal_layer(sol)
-plt.show()
+# Importation required to run this code
+import isopoly_solar_wind_solve_and_plot as ipsw
+
+#########################################
+# Inputs of the model 
+#########################################
+
+# Length of the output model
+N = 7e4
+L = 1.496e11      # set to 1au by default
+
+# Polytropic ind
+gamma_p_max = 1.45
+gamma_e_max = 1.25
+
+# Coronal temperature
+Tp0 = 2e6
+Te0 = 1.5e6
+
+# Isothermal radius (in solar radii)
+r_iso_p = 4 
+r_iso_e = 7 
+
+# Expansion factor parameters
+fm = 25
+r_exp = 1.9          # in solar radii
+sig_exp = 0.15       # in solar radii
+#########################################
+# Plotting option 
+plot_f = True
+plot_gamma = False
+
+plot_speed = True
+plot_density = True
+plot_temp = True
+plot_energy = False
+#########################################
+
+###############################################################
+# Running of the main function
+(r, n, u, Tp, Te, gamma_p, gamma_e, f, bol_super) = ipsw.solve_isopoly(
+                                        N, L, gamma_p_max, gamma_e_max, 
+                                        Tp0, Te0, r_iso_p, r_iso_e,
+                                        fm, r_exp, sig_exp, plot_f, 
+                                        plot_gamma, plot_speed, 
+                                        plot_density, plot_temp, plot_energy)
+###############################################################
 ```
 ![image](IsoLayerExample.png)
 
