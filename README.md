@@ -2,7 +2,7 @@
 
 This repository complete and extend the one with the exact same name that can be found at [https://github.com/STBadman/ParkerSolarWind](https://github.com/STBadman/ParkerSolarWind). It contains Python code which solves the hydrodynamic solar wind equations for a 1D radial trans-sonic flow in spherical expansion, based on Eugene Parker's theory of the solar wind ([Parker 1958](https://ui.adsabs.harvard.edu/abs/1958ApJ...128..664P/abstract), [Parker 1960](https://ui.adsabs.harvard.edu/abs/1960ApJ...132..821P/abstract)).
 
-This code follows the recent "isopoly" resolution by [Dakeyo et al. (2022)](https://ui.adsabs.harvard.edu/abs/2022ApJ...940..130D/abstract) and [Dakeyo et al. (2024b)](https://ui.adsabs.harvard.edu/abs/2022ApJ...940..130D/abstract, which model an isothermal layer close to the Sun, followed by a polytropic expansion above the critical radius. 
+This code follows the recent "isopoly" resolution by [Dakeyo et al. (2022)](https://ui.adsabs.harvard.edu/abs/2022ApJ...940..130D/abstract) and [Dakeyo et al. (2024b)](https://ui.adsabs.harvard.edu/abs/2022ApJ...940..130D/abstract), which model an isothermal layer close to the Sun, followed by a polytropic expansion above the critical radius. 
 
 There are three main files here `function_iso_poly_dakeyo2024b`, `exe_function_iso_poly_dakeyo2024b` and `use_function_iso_poly_dakeyo2024b` . The former contains the functions to solve the equations themselves, , a file that execute the solving and plot the solution, and a later that only present the input of the model. The equations are solved by a finite difference scheme. 
 There are three types of solutions :
