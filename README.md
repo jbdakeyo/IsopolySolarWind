@@ -4,8 +4,7 @@ This repository complete and extend the one with the exact same name that can be
 
 This code follows the recent "isopoly" resolution by [Dakeyo et al. (2022)](https://ui.adsabs.harvard.edu/abs/2022ApJ...940..130D/abstract) and [Dakeyo et al. (2024b)](https://ui.adsabs.harvard.edu/abs/2022ApJ...940..130D/abstract, which model an isothermal layer close to the Sun, followed by a polytropic expansion above the critical radius. 
 
-There are three main files here `function_iso_poly_dakeyo2024b`, `exe_function_iso_poly_dakeyo2024b` and . The former contains the functions to solve the equations themselves, while  the latter contain functions to plot the different types of solutions. The solver engine is `scipy.optimize.root`. 
-
+There are three main files here `function_iso_poly_dakeyo2024b`, `exe_function_iso_poly_dakeyo2024b` and `use_function_iso_poly_dakeyo2024b` . The former contains the functions to solve the equations themselves, , a file that execute the solving and plot the solution, and a later that only present the input of the model. The equations are solved by a finite difference scheme. 
 There are three types of solutions :
 
 * An isothermal solar wind (`parkersolarwind.solve_parker_isothermal`) <details><p> - This follows [Parker 1958](https://ui.adsabs.harvard.edu/abs/1958ApJ...128..664P/abstract), in which the solar wind fluid is held at a fixed temperature. Mass flux conservation results in a negative density gradient and in turn an outwards directed pressure gradient force. For sufficiently hot $T_0$, this outwards force outcompetes gravitation, resulting in a trans-sonic solar wind flow out to infinity. While such a constant temperature is non-physical in the heliosphere, it is a reasonable first approximation to behavior in the solar corona where coronal heating operates.</p></details>
