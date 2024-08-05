@@ -77,7 +77,7 @@ plot_energy = False
                                         plot_density, plot_temp, plot_energy)
 ###############################################################
 ```
-![image](IsoLayerExample.png)
+![image](iso)
 
 Examples for the other two types of solution as a function of varying input parameters can be seen in `ExampleNotebook.ipynb`
 
