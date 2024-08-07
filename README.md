@@ -61,9 +61,7 @@ sig_exp = 0.15       # in solar radii
 plot_f = True
 plot_gamma = False
 
-plot_speed = True
-plot_density = True
-plot_temp = True
+plot_unT = True
 plot_energy = False
 #########################################
 
