@@ -25,7 +25,7 @@ Since all solutions are computed with the same set of codes, each of the above s
 
 All the outputs are `numpy array`. 
 
-In the following example, we solve and plot a f-subsonic isopoly solution with double transition :
+In the following example we solve and plot an f-subsonic isopoly solution with double transition. All thermal regimes related to the evolution of the two species (proton and electron) are indicated by a different color: the fully isothermal region is in red, the region after the first thermal transition (one species isothermal and the other polytropic) is in light blue, and the region after the second thermal transition (fully polytropic) is in blue. 
 
 ```python
 # Importation required to run this code
