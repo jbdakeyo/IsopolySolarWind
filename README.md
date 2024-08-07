@@ -21,15 +21,11 @@ The f-supersonic solutions are known, but less used in the space weather communi
 More details are available in [Dakeyo et al. (2024b)](https://ui.adsabs.harvard.edu/abs/2022ApJ...940..130D/abstract) 
 
 
-Since all solutions are computed with the same set of codes, each of the above solutions can be obtained by modifying the inputs parameters. The `main_iso_poly_dakeyo2024b` code returns an array of heliocentric distances ($r$ in solar radii), density ($n$ in #.$cm^-3$ ), fluid velocity ($u$ in km/s), fluid temperatures ($T_p$ and $T_e$ in Kelvin), expansion factor profile ($f$) and a bolean mentionning if this is a "f-supersonic" type solution (bol_super=0 $\rightarrow$ f-subsonic, bol_super=1 $\rightarrow$ f-supersonic).  As well, any parameters that went into the solution are returned as "inputs".
+Since all solutions are computed with the same set of codes, each of the above solutions can be obtained by modifying the inputs parameters. The `main_iso_poly_dakeyo2024b` code returns an array of heliocentric distances ($r$ in solar radii), density ($n$ in #.$cm^-3$ ), fluid velocity ($u$ in km/s), fluid temperatures ($T_p$ and $T_e$ in Kelvin), expansion factor profile ($f$) and a bolean mentionning if this is a "f-supersonic" type solution (bol_super=0 $\rightarrow$ f-subsonic, bol_super=1 $\rightarrow$ f-supersonic). 
 
 All the outputs are `numpy array`. 
 
-Units are tracked with `astropy.units` and the outputs of the above functions are `astropy.units.Quantity` objects.
-
-`plot_parkersolarwind` subsequently contains plotting functions which are expecting these same output arrays and parameters. 
-
-In the following example, we solve and plot an isopoly solution :
+In the following example, we solve and plot a f-subsonic isopoly solution with double transition :
 
 ```python
 # Importation required to run this code
