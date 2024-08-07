@@ -78,6 +78,6 @@ plot_energy = False
 ```
 ![image](isopoly_example.png)
 
-Examples for all the thermal regimes and types of solution (f-subsonic and f-supersonic) can be seen in `ExampleNotebook.ipynb`
+Other examples for all the thermal regimes and types of solution (f-subsonic and f-supersonic) can be seen in `ExampleNotebook.ipynb`
 
 
