@@ -16,10 +16,10 @@ For most combinations of physical conditions, the trans-sonic critical point is 
 * A two fluid isopoly solar wind with double transition ($\gamma_p$ and/or $\gamma_e \neq 1$,  with  $r_{iso|p} \neq r_{iso|e}$) <details><p> - This case is closely similar to the single transition solution, at the difference that protons and electrons do not share the same isothermal radius. </details></p>
 
 All the thermal regimes can be declined in both "f-subsonic" and "f-suersonic" type of solution, depending the influence of the expansion factor profile. 
-* f-subsonic solution </details><p> - The f-subsonic solutions are the more commonly used in solar wind modeling and space weather. They embed relatively slowly accelerating wind, and a critical radius location between 3 and 8 $r_\odot$ for coronal temperature of the order of 0.5 - 3 MK. For this type of solution, the influence of the expansion factor is to create a deceleration region within the super-expansion region.  </details></p>
+* f-subsonic solution <details><p> -  The f-subsonic solutions are the more commonly used in solar wind modeling and space weather. They embed relatively slowly accelerating wind, and a critical radius location between 3 and 8 $r_\odot$ for coronal temperature of the order of 0.5 - 3 MK. For this type of solution, the influence of the expansion factor is to create a deceleration region within the super-expansion region. 
 * f-subsonic solution </details><p> - The f-supersonic solutions are known, but less used in the space weather community. They induce a rapidly accelerating solar wind solution with a critical radius very close to the Sun inside the super-expansion region, ranging between 1 and $\sim$ 3 $r_\odot$, for coronal temperatures of the order of 0.5 - 3 MK.  They also induce a deceleration region, but approximately from the end of the super-expansion region to $\sim$ 8 $r_\odot$.  </details></p>
 
-The switch between the two solutions depends on the determination of the critical radius, which respects the requirements of the transonic solutions.  
+The numerical and physical choice between the two solutions depends on the determination of the critical radius, which must respects the requirements of the transonic solutions.  
 More details are available in [Dakeyo et al. (2024b)](https://ui.adsabs.harvard.edu/abs/2022ApJ...940..130D/abstract) 
 
 
