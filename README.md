@@ -1,4 +1,4 @@
-## Isopoly
+## IsopolySolarWind
 
 This repository complete and extend the **_ParkerSolarWind_** respository that can be found at [https://github.com/STBadman/ParkerSolarWind](https://github.com/STBadman/ParkerSolarWind). 
 The **_Isopoly_** respository contains Python codes which solve two-fluids hydrodynamic solar wind equations, for a 1D radial trans-sonic flow in spherical expansion, including super-radial expansion, based on Eugene Parker's theory of the solar wind ([Parker 1958](https://ui.adsabs.harvard.edu/abs/1958ApJ...128..664P/abstract), [Parker 1960](https://ui.adsabs.harvard.edu/abs/1960ApJ...132..821P/abstract)) and expansion factor modeling ([Kopp & Holzer 1976](https://ui.adsabs.harvard.edu/abs/1976SoPh...49...43K/abstract)).
