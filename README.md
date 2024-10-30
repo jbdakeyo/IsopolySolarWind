@@ -84,5 +84,9 @@ Other examples for all the thermal regimes and types of solution (f-subsonic and
 
 At the end of the same file, another function `stream_calc_dakeyo2024a` allows to trace the Parker's like spiral (streamline) associated with the computed isopoly solution. The code follows the backmapping method including acceleration and corotational effect presented in [Dakeyo et al. (2024a)](https://ui.adsabs.harvard.edu/abs/2024A%26A...686A..12D/abstract), that is also used in [Dakeyo et al. (2024b)](https://arxiv.org/abs/2408.06155). 
 
+[google-site-verification: googleee621abb005dea4a.html](googleee621abb005dea4a.html)
+
+
+
 
 
