@@ -5,7 +5,7 @@ The **_IsopolySolarWind_** respository contains Python codes which solve two-flu
 
 The codes follows the recent "isopoly" Parker's-like model by [Dakeyo et al. (2022)](https://ui.adsabs.harvard.edu/abs/2022ApJ...940..130D/abstract), which model an isothermal evolution close to the Sun, followed by a polytropic evolution somewhere above the critical radius. It also include the extension of the isopoly equations by [Dakeyo et al. (2024b)](https://arxiv.org/abs/2408.06155) accounting for the expansion factor modeling in the near Sun region, and the resulting "f-subsonic" and "f-supersonic" solutions, respectively subsonic and supersonic in the super-expansion region. This split of solution is due to the deLaval nozzle effect applied on the wind expansion ([Kopp & Holzer 1976](https://ui.adsabs.harvard.edu/abs/1976SoPh...49...43K/abstract)), that induces two possible critical radius values for a single coronal temperature value. 
 
-There are three main files : `function_to_run_iso_poly_dakeyo2024b`, `isopoly_solar_wind_solve_and_plot` and `main_iso_poly_dakeyo2024b`. All the files must be stored in the same respository for the execution. The former contains the functions to solve the equations themselves, the second file runs the solver and plots the solution, and the latter is the main code for the user, which takes the inputs of the model, runs the first two files to display the solutions, and provides the output isopoly parameters. An example of the use of the main code `main_iso_poly_dakeyo2024b` is provided in the Jupyter Notebook `ExampleNotebook.ipynb`. 
+There are three main files : `function_to_run_iso_poly_dakeyo2024b`, `isopoly_solar_wind_solve_and_plot` and `main_iso_poly_dakeyo2024b`. All the files must be stored in the same respository for the execution. The former contains the functions to solve the equations themselves, the second file runs the solver and plots the solution, and the latter is the main code for the user, which takes the inputs of the model, runs the first two files to display the solutions, and provides the output isopoly parameters. An example of the use of the main code `main_iso_poly_dakeyo2024b` is provided in the Jupyter Notebook `IsopolyNotebookExample.ipynb`. 
 
 The equations are solved by a finite difference scheme (explicit method). 
 The combination of input parameters results in three different possible thermal regimes :
@@ -22,7 +22,7 @@ All the thermal regimes can be declined in both "f-subsonic" and "f-suersonic" t
 * f-supersonic solutions <details><p> - The f-supersonic solutions are known, but less used in the space weather community. They induce a rapidly accelerating solar wind solution with a critical radius very close to the Sun inside the super-expansion region, ranging between 1 and $\sim$ 3 $r_\odot$, for coronal temperatures of the order of 0.5 - 3 MK.  They also induce a deceleration region, but approximately from the end of the super-expansion region to $\sim$ 8 $r_\odot$.  </details></p>
 
 The numerical and physical justification for the choice between the two solutions is automatically made. It depends on the determination of the critical radius, which must respects the requirements of the transonic solutions.  More details are available in [Dakeyo et al. (2024b)](https://arxiv.org/abs/2408.06155). 
-Recommendations for appropriate isopoly input values are provided at the end of the `ExampleNotebook.ipynb` file in the repository.
+Recommendations for appropriate isopoly input values are provided at the end of the `IsopolyNotebookExample.ipynb` file in the repository.
 
 
 Since all solutions are computed with the same set of codes, each of the above solutions can be obtained by modifying the inputs parameters. The `main_iso_poly_dakeyo2024b` code returns an array of heliocentric distances ($r$ in solar radii), density ($n$ in #.$cm^-3$ ), fluid velocity ($u$ in km/s), fluid temperatures ($T_p$ and $T_e$ in Kelvin), polytropic indexes profiles ($\gamma_p$ and $\gamma_e$), expansion factor profile ($f$) and a bolean mentionning if this is a "f-supersonic" type solution (bol_super=0 $\rightarrow$ f-subsonic, bol_super=1 $\rightarrow$ f-supersonic). 
@@ -80,7 +80,7 @@ plot_energy = False
 ```
 ![image](isopoly_example.png)
 
-Other examples for all the thermal regimes and types of solution (f-subsonic and f-supersonic) can be seen in `ExampleNotebook.ipynb`. 
+Other examples for all the thermal regimes and types of solution (f-subsonic and f-supersonic) can be seen in `IsopolyNotebookExample.ipynb`. 
 
 At the end of the same file, another function `stream_calc_dakeyo2024a` allows to trace the Parker's like spiral (streamline) associated with the computed isopoly solution. The code follows the backmapping method including acceleration and corotational effect presented in [Dakeyo et al. (2024a)](https://ui.adsabs.harvard.edu/abs/2024A%26A...686A..12D/abstract), that is also used in [Dakeyo et al. (2024b)](https://arxiv.org/abs/2408.06155). 
 
