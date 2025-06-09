@@ -49,8 +49,8 @@ plot_energy = False
 #########################################
 # Streamline tracing 
 #########################################
-stream_calc = True
-plot_streamline = True
+stream_calc = False
+plot_streamline = False
 # Probe location for streamline tracing
 phi_sat = 10     # in degrees
 
